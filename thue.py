@@ -35,7 +35,7 @@ class ThueParser:
 			if rhs[0] == OUTPUT_STREAM:
 				print(rhs[1:])
 				self.statement = self.statement.replace(lhs, "", 1)
-			elif rhs[0] == INPUT_STREAM:
+			elif rhs == INPUT_STREAM:
 				query = input("%s=" % lhs)
 				self.statement = self.statement.replace(lhs, query, 1)
 			else:
