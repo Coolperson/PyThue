@@ -14,5 +14,5 @@ See LICENSE for details.
 Demonstrates the output stream (`~`)
 ###`echo.thue`
 Demonstrates the input stream (`:::`)
-###binaryinc.thue
+###`binaryinc.thue`
 Increments the binary number wrapped in `_`'s
