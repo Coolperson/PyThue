@@ -43,6 +43,7 @@ class ThueParser:
 			self.current = list(self.rules)
 		else:
 			self.current.pop(index)
+
 	def execute(self):
 		while len(self.current) > 0:
 			self.step()
