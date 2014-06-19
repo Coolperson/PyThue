@@ -1,3 +1,13 @@
+"""
+	PyThue - The python Thue interpreter
+	by Daniel Swann
+
+	Usage: thue.py <filename>
+
+	Licensed under the WTFPL
+	See LICENSE for details
+"""
+
 import random
 import sys
 
