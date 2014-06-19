@@ -7,6 +7,11 @@ INPUT_STREAM = ":::"
 OUTPUT_STREAM = "~"
 
 
+class ThueError(Exception):
+	def __init__(self, value):
+		self.value = value
+
+
 class ThueParser:
 	def __init__(self):
 		self.rules = []
@@ -25,6 +30,10 @@ class ThueParser:
 			if rules_complete and len(line) > 0:
 				self.statement = line
 				break
+		if len(self.rules) == 0:
+			raise ThueError("No rules detected!")
+		if self.statement is None:
+			raise ThueError("No statement detected!")
 		self.current = list(self.rules)
 
 	def step(self):
